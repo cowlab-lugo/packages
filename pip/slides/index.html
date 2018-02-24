@@ -17,7 +17,10 @@
             data-separator="^\n----\n$"
             data-separator-vertical="^\n---\n$">
             <script type="text/template">
-            # PIP <!-- .element: class="green" -->
+            <!-- .slide: data-background="#242177" -->
+            <img class="plain" src="images/cowlab.png" alt="cowlab - paquetes">
+
+            # PIP
 
             ## Python Package Manager
 
@@ -25,7 +28,7 @@
 
             ----
 
-            # What is pip
+            # What is <span class="green">pip</span>
 
             * [pip](https://pip.pypa.io/en/stable/quickstart/) is a package management system used to install and manage software packages written in Python.
 
@@ -113,7 +116,7 @@
 
             (recommended for people with free time and without children)
 
-            ----
+            ---
 
             <!-- .slide: data-background="images/thumbsup.gif" -->
             ## Or you can...
@@ -150,7 +153,7 @@
 
             Setuptools and `easy_install` were created to solve these problems.
 
-            It's a 3rd party library that allows Python to understand `.egg` files and `easy_install` is able to download+install package + **all its dependencies**. **BUT**:
+            It's a 3rd party library that allows Python to understand `.egg` files and `easy_install` is able to download+install package + **all its dependencies**. **BUT<!-- .element: class="red" -->**:
 
             * If some of the dependencies fails, the installation is not usable.
             * Error codes are incomprehensible.
@@ -161,7 +164,7 @@
 
             ## PIP
 
-            And pip is great **BECAUSE**:
+            And pip is great **BECAUSE<!-- .element: class="green" -->**:
 
             * Downloads all dependencies before installation: ensure install fidelity.
             * Install straight from version control systems such as `git`, `mercurial`, `subversion`, and `bazaar`.
@@ -187,6 +190,118 @@
             $ pip help uninstall
             ```
 
+            ```console
+            $ pip list
+            $ pip freeze
+            $ pip help
+            ```
+
+            ----
+
+            # Installation of pip
+
+            #### Debian
+
+            ```console
+            $ apt install...
+            ```
+
+            #### OSX
+
+            ```console
+            $ brew install...
+            ```
+
+            ----
+
+            # Task <span class="green">#1</span>
+
+            Install a real project using pip<!-- .element: class="green" -->
+
+            ---
+
+            ## <span class="red">1.</span> How to install pip
+
+            It depends on the O.S. as we did in the other slide.
+
+            ---
+
+            ## <span class="red">2.</span> Virtualenv
+
+            We need to create and activate the environment with `virtualenv`:
+
+            ```console
+            $ virtualenv lektor
+            $ . lektor/bin/activate
+            (lektor)$
+            ```
+
+            ---
+
+            ## <span class="red">3.</span> Install the real project
+
+            ```console
+            (env)$ pip install Lektor
+            ```
+            <img class="plain" src="images/task1-1.png" />
+
+            ---
+
+            ### <span class="red">3.1.</span> What happened?
+
+            Where are all those files <span class="red">FROM</span>?
+
+            * It reads the requirements from `requirements.txt` or `setup.py`
+            * <img class="plain" src="images/task1-2.png" />
+
+            ---
+
+            ### <span class="red">3.1.</span> What happened?
+
+            Where are all those files <span class="red">GOING</span>?
+
+            * Installed all the packages in the environment directory `env/lib/pythonX.X/site-packages`
+            * <img class="plain" src="images/task1-3.png" />
+
+            ---
+
+            ## <span class="red">4.</span> Run the project
+
+            ```console
+            (env)$ lektor quickstart
+            (env)$ cd blog
+            (env)$ lektor server
+            ```
+
+            <img class="plain" src="images/task1-4.png" />
+
+            ---
+
+            ## <span class="red">5.</span> Other stuff
+
+            * Explain different environments for testing, devel or production
+
+            ----
+
+            # Task <span class="green">#2</span>
+
+            Create a package from scratch<!-- .element: class="green" -->
+
+            ---
+
+            ## <span class="red">1.</span> Package skel
+
+            ---
+
+            ## <span class="red">2.</span> Publish the package
+
+            ----
+
+            # Best practices
+
+            * Use pip + virtualenv
+            * User version pinning
+
             ----
 
             # Resources
@@ -196,6 +311,13 @@
             * [Github page of pip](https://github.com/pypa/pip)
             * [Python Packaging Authority](https://www.pypa.io/en/latest/)
             * [Python Packaging User Guide](https://packaging.python.org/)
+
+            ----
+
+            <!-- .slide: data-background="#242177" -->
+            <img class="plain" src="images/cowlab.png" alt="cowlab - paquetes">
+
+            # Thanks
 
             </script>
         </section>
