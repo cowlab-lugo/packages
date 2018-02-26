@@ -136,21 +136,45 @@
 							data-transition-speed="fast"
 							data-markdown
 						>
-						## TAREFA 2
+						## Create a package
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Minimum Viable Package!
+						### How to:
+
+						* Create a composer.json file with "composer init" or
+						* Create composer.json manually
+						* Public packages:
+							* Put your package on accesiblle repository (git/svn/hg)
+							* Publish your package on https://packagist.org/
+							* Notify Packagist when your package is updated
+						* Composer support private packages
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Publicar no rexistro
+						### Use you package on you project
+
+						Require on your composer.json project:
+						<pre><code>
+							"require": {
+								"cowlab/checker": "dev-master"
+							}
+			</code></pre>
+
+						Use on your app:
+
+						<pre><code>
+							require '../vendor/autoload.php';
+
+							use Cowlab\Checker\Http;
+				</code></pre>
+
 					</section>
 				</section>
 				<section>
