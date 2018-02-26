@@ -31,7 +31,6 @@
         }
     },
     "scripts": {
-        "server": "php -S localhost:8889 -t public",
         "test": "vendor/bin/phpunit",
         "psr2": "php-cs-fixer fix src"
     },
