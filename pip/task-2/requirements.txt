@@ -1,0 +1,2 @@
+# Install base dependencies only.
+-r requirements/base.txt

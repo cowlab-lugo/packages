@@ -9,7 +9,7 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
-version = '0.1'
+version = open('VERSION').read()
 readme = open('README.md').read()
 requires = ['Requests', 'validators']
 
@@ -27,7 +27,6 @@ setup(
     author_email='info@oscarmlage.com',
     url='https://github.com/cowlab/iscowalive',
     description="""simple module that checks if url is available.""",  # noqa
-    test_suite="runtests.run_tests",
     long_description=readme,
     scripts=['bin/ica'],
     packages=find_packages(),

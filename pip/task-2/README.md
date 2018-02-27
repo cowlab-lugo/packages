@@ -13,6 +13,6 @@ The project is born in a chat with Andrés and Diego while we were drafting the 
 ## Links
 
 * [Code repository](https://github.com/cowlab-lugo/iscowalive)
-* [Documentation]()
-* [Pypi]()
+* [Documentation](http://iscowalive.readthedocs.io/en/latest/)
+* [Pypi](https://pypi.org/project/iscowalive/)
 * [GitHub Issues](https://github.com/cowlab-lugo/iscowalive/issues)

@@ -1,0 +1,15 @@
+# Install base dependencies
+-r base.txt
+
+# Development dependencies
+Sphinx
+sphinx-rtd-theme
+pep8
+
+# Test dependencies
+pytest
+pytest-cov
+pytest-runner
+pytest-pep8
+coverage
+
