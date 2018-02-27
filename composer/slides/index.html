@@ -60,7 +60,7 @@
 							data-transition-speed="fast"
 							data-markdown
 			   		>
-						### History
+						#### History
 						* Developed by Nils Adermann (http://naderman.de) and by Jordi Boggiano (https://seld.be)
 						* Inspired by Node.js's "npm" and Ruby's "bundler"
 						* First released it on March 1, 2012
@@ -73,7 +73,7 @@
 							data-transition-speed="fast"
 							data-markdown
 			   		>
-						### Some features
+						#### Some features
 						* Install dependencies and binaries
 						* Create project from package
 						* Event scripts and custom scripts
@@ -92,45 +92,119 @@
 							data-transition-speed="fast"
 							data-markdown
 						>
-						## TAREFA 1
+						## Use composer
+					</section>
+					<section data-background-color="#242177"
+							data-transition="slide-in slide-out"
+							data-transition-speed="fast"
+							data-markdown
+						>
+						#### System Requirements
 
-						Instalar e executar un proxecto real que use o sistema de paquetes
+						* PHP 5.3.2+
+						* "A few sensitive php settings and compile flags are also required, but when using the installer you will be warned about any incompatibilities."
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Requisitos
+						#### Installation Linux / Unix / OSX
+
+						<pre><code>
+							// Install local
+							curl -s https://getcomposer.org/installer | php
+
+							// Install global
+							mv composer.phar /usr/local/bin/composer
+
+							// Check installation
+							composer --version
+
+							// Update composer
+							composer self-update
+
+							// Rollback to previous version
+							composer self-update --rollback
+				</code></pre>
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Proxecto
+						#### composer.json vs composer.lock
+
+						composer.json ([JSON schema](http://json-schema.org/))
+							* metadata
+							* configuration
+							* dependencies
+							* scripts
+							* extra
+							* ...
+
+						composer.lock
+							* based on composer.json file
+							* lock dependencies versions
+							* let developers run same dependencies
+
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Executar
+						#### Composer.json example
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Manexar dependencias
+						#### Basic commands
+
+						* "composer install" : Install all dependencies on composer.lock,
+						if composer.lock don't exits, install all dependencies on composer.json
+						and create a composer.lock file.
+
+						* "composer update": Update all dependencies and update composer.lock file, if only exists
+						composer.json, works like "composer install".
 					</section>
 					<section data-background-color="#242177"
 							data-transition="slide-in slide-out"
 							data-transition-speed="fast"
 							data-markdown
 						>
-						### Outros
+						#### More commands
+						<pre><code>
+							// Adds required packages to your composer.json
+							// and installs them
+							composer require vendor/package:version
+
+							// Removes a package from the require or require-dev
+							composer remove vendor/package
+
+							// Dumps/regenerate autoloader
+							composer dump-autoload
+
+							// Get raw list of commands
+							composer list --raw
+				</code></pre>
 					</section>
+					<section data-background-color="#242177"
+							data-transition="slide-in slide-out"
+							data-transition-speed="fast"
+							data-markdown
+						>
+						#### Semantic versioning
+					</section>
+				</section>
+				<section data-background-color="#242177"
+							data-transition="slide-in slide-out"
+							data-transition-speed="fast"
+							data-markdown
+						>
+						## COMPOSER CREATE PROJECT
 				</section>
 				<section>
 					<section data-background-color="#242177"
