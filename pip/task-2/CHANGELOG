@@ -1,0 +1,175 @@
+=========
+Changelog
+=========
+
+0.0.9
+-----
+
+* ''cce702a'' Merge branch 'master' of https://github.com/oscarmlage/django-cruds-adminlte
+* ''621988e'' Merge pull request #49 from migue56/django2_0_#48
+* ''b958d88'' Checking lines
+* ''f473a6f'' checking filter url when changes you from  view to other view (checked)
+* ''b7fc88f'' fixed filters paramters to grud.py
+* ''56f2efc'' changes on filter.py to build pagination params
+* ''fd1f9d7'' Changes filter.py get_cleaned_fields
+* ''b0730be'' cleaning  print() to filter.py
+* ''9c86a80'' cleaning  print() to filter.py
+* ''cf1e4f7'' update filter.py
+* ''1b4d2e9'' try/except ValueError over get_filter
+* ''9f4cd8f'' Update demo to testing issues
+* ''6587ef5'' Update demo to testing of issues django 2.0
+* ''ec175b1'' Fixes #48:  'ForeignKey' object has no attribute 'rel'
+* ''c5c3007'' Merge pull request #47 from migue56/django2_0
+* ''ed61dfa'' Update urls.py
+* ''d89d9d9'' Update models.py
+* ''74c6050'' Update utils.py
+* ''92dd062'' Update crud_tags.py
+* ''5c59a38'' Update adminlte_helpers.py
+* ''d28022a'' Test and settings of demo django2.0/1.11/1.10
+* ''4f03c2c'' Test and settings of demo django2.0/1.11/1.10
+* ''ce14461'' Test and settings of demo django2.0
+* ''0c1b7bc'' Test and settings of demo django2.0
+* ''f0ab4e8'' Deleted debug-toolbar to demo django 2.0
+* ''f9ea2d6'' Cleaning debug-toolbar to demo django 2.0
+* ''38482cb'' Changed demo to django 2.0
+* ''5994072'' Change requirements.txt ajax version
+* ''c09375f'' Add intergerfild to templates colums
+* ''b35df35''  Attibute 'user.is_authenticated()' don't exist on django 2.0, change to 'user.is_authenticated'
+* ''f760b44''  Attibute 'user.is_authenticated' don't exist on django 2.0
+* ''295d7d1'' Changes of 'installation.rst' with django 2.0 librarys
+* ''3fdf9d3'' fix 'register.assignment_tag' to django 2.0
+* ''1cd0548'' Attribute '@register.assignment_tag' don't exist on django 2.0, changing that to @register.tag
+* ''ddf0f93'' Import of file utils.py  'from django.core.urlresolvers import reverse' don't exist on Django 2.0, that need to be changig to  'from django.urls import reverse
+* ''bb825b0'' Import of file templatetags/crud_tags.py  'from django.core.urlresolvers import reverse' don't exist on Django 2.0, that need to be changig to  'from django.urls import reverse'.
+* ''04e8d17'' Removing print
+* ''6a223af'' Merge pull request #42 from justelex/patch-2
+* ''f5ad3bc'' Merge pull request #41 from justelex/patch-1
+* ''f443982'' Python 2 -> Python 3
+* ''2f5cfd8'' Fixed: Wrong packagename in documtation
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.9...master
+
+0.0.8
+-----
+
+* ''33e5166'' (HEAD -> master, origin/master, origin/HEAD) PEP8 Cosmetics
+* ''906b023'' Merge pull request #40 from luisza/filter
+* ''bbde3f1'' Update documentation of components
+* ''33ffed7'' Documentation and some fixes
+* ''907d72f'' Filters working with pagination but not with search form
+* ''80dc29a'' Filter form
+* ''8df2764'' Merge master
+* ''3d0999d'' Add filter collapse
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.8...master
+
+0.0.7
+-----
+
+* ``cb61f46`` (HEAD -> master, origin/master, origin/HEAD) PEP8 Cosmetics
+* ``ac5d979`` Merge pull request #39 from luisza/pagination
+* ``309d37e`` Pagination functionality with support of numeration and prev_next
+* ``160550b`` Partially fixes #23, pagination now is set (hardcoded) to 10 + added pagination links in list template
+* ``76d8245`` Fixes #34, corrections to the README
+* ``80931a8`` Fixed pypi url
+* ``33350d3`` Adding online resources to the documentation
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.7...master
+
+0.0.6
+-----
+
+* ``2afad55`` (HEAD -> master, origin/master, origin/HEAD) Fixes an error related with #32 + Updates the demo
+* ``5a63520`` Added feature: common cruds url + fixes #32
+* ``57b4ea6`` Adding new column types
+* ``fa54e77`` PEP8 Cosmetics
+* ``4b458f9`` Fixed: adds the filter only if there is request.GET.get(related), if not it works as before
+* ``6af9252`` Merge pull request #31 from luisza/relatedCrud
+* ``5932da4`` Related fields for foreignkeys
+* ``a5596f2`` Adding relad field function
+* ``908c055`` Fixes CHANGELOG links
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.6...master
+
+0.0.5
+------
+
+* ``a87c87c`` - (HEAD -> master, origin/master, origin/HEAD) Added some screenshot to the documentation (2)
+* ``96bdb58`` - Added some screenshot to the documentation
+* ``dfa74ce`` - PEP8 cosmetic + some minor fixes related to search feature
+* ``9ffcf51`` - Merge pull request #28 from luisza/search
+* ``6dd38ff`` - Search feature
+* ``4a64ca0`` - Typo fixed, thanks to Matej Vadnjal (@matejv) for noticing
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.5...0.0.6
+
+0.0.4
+------
+
+* ``df6cbcf`` - (HEAD -> master, origin/master, origin/HEAD) PEP8 cosmetics
+* ``cdbb7d4`` - Merge pull request #26 from luisza/perm_fixes
+* ``b50d8a5`` - fixed contentype not found on migrations
+* ``616a75c`` - fixed permission and allow inherit of other base template
+* ``eed91a9`` - Merge branch 'master' into docs
+* ``16e89e3`` - Update CRUDViews documentation
+* ``d788b6d`` - PEP8 cosmetics
+* ``dbcee00`` - Merge pull request #24 from luisza/demo_fixes
+* ``48b1d42`` - Adding demo site and fix input time format
+* ``1a7f4a1`` - Fix str not _meta in list view
+* ``c99f2ba`` - Filter views and demo site
+* ``c26132a`` - Added demo site
+* ``c4a3055`` - Adding tests structure
+* ``159981f`` - Inline forms running properly in modal. Errors are well formatted now. Fixes #22
+* ``c4a830f`` - Fixing MANIFEST
+* ``6aa9676`` - Merge master
+* ``dd24b8f`` - Documentation minor issue fixed (2)
+* ``999dafb`` - Documentation minor issue fixed
+* ``7f803d0`` - Documentation improved, new screenshot images for inlines
+* ``6a8acc1`` - Adding cruds-columns screenshot to documentation
+* ``8b879af`` - Change documentation theme for RTD
+* ``5d50505`` - Improve README.rst with screenshots (6)
+* ``ea59ff4`` - Improve README.rst with screenshots (5, github does not allow include in README.rst for security reasons)
+* ``0f60b87`` - Improve README.rst with screenshots (4)
+* ``8d540e5`` - Improve README.rst with screenshots (3)
+* ``fe702d8`` - Improve README.rst with screenshots (2)
+* ``6e6d7b1`` - Improve README.rst with screenshots
+* ``b26d90d`` - Documentation organized (fixes #13)
+* ``b54ea2b`` - Documentation organized (fixes #13)
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.4...0.0.5
+
+0.0.3
+------
+* ``e4e3f0b`` - (HEAD -> master, origin/master, origin/HEAD) Add bootstrap
+                modal windows to inline behavior
+* ``23b111f`` - Fixes some inline_crud errors
+* ``7a6ae01`` - Some pep8 cosmetics
+* ``e8bed1d`` - Merge pull request #12 from luisza/ajax_inline
+* ``bc1992a`` - Merge pull request #11 from luisza/pip_package
+* ``eeceeb2`` - New Inline ajax functionality
+* ``542c6ff`` - Adding templatetags
+* ``d81441d`` - remove IDE .settings/
+* ``f367bdb`` - Adding templates and static to pip package
+* ``e93741d`` - Merge remote-tracking branch 'upstream/master'
+* ``70fe2c1`` - Merge pull request #9 from luisza/new_crud_system
+* ``72faa04`` - Removing old code sample related to ckeditor, fixes #10
+* ``b6a7a41`` - Fix documentation
+* ``baa5568`` - Namespace full support
+* ``fa57be6`` - Adding forms
+* ``e9fd050`` - Requirements for project
+* ``007c7ac`` - New CRUD System without test or docs
+* ``df2a868`` - Fixed bad link to jquery-cookie (added to static)
+* ``c220cd7`` - Fixed bad link to jquery-cookie (added to static)
+* ``af58e34`` - Added some missing stuff due to bad .gitignore. Fixes #8
+* ``907b288`` - Improve columns related code
+* ``3da9be8`` - Fixed documentation
+* ``a14e7ec`` - Added support for columns in list pages
+* ``636734b`` - Updated documentation with Pypi link. Fixes #6
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.3...0.0.4
+
+0.1
+------
+* ``b2cb152`` - Initial import
+
+https://github.com/oscarmlage/django-cruds-adminlte/compare/0.0.2...0.0.3

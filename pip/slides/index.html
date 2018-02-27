@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PIP</title>
+    <title>pip - python package manager</title>
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/black.min.css">
     <link rel="stylesheet" href="css/zenburn.css">
@@ -20,15 +20,21 @@
             <!-- .slide: data-background="#242177" -->
             <img class="plain" src="images/cowlab.png" alt="cowlab - paquetes">
 
-            # PIP
+            Cowlab Talks
 
-            ## Python Package Manager
-
-            by [oscar<span class="grey">m</span>lage](https://oscarmlage.com)
+            ### Package Managers
 
             ----
 
-            # What is <span class="green">pip</span>
+            ## PIP
+
+            Python Package Manager
+
+            [https://github.com/pypa/pip](https://github.com/pypa/pip)
+
+            ----
+
+            # What is pip
 
             * [pip](https://pip.pypa.io/en/stable/quickstart/) is a package management system used to install and manage software packages written in Python.
 
@@ -104,6 +110,14 @@
 
             ----
 
+            ## There are many options
+
+            Distutils, distribute, setuptools, pip...
+
+            <img src="images/manyoptions.gif" alt="many options" />
+
+            ---
+
             ## You can
 
             Read all this stuff to try to understand something:
@@ -119,11 +133,9 @@
             ---
 
             <!-- .slide: data-background="images/thumbsup.gif" -->
-            ## Or you can...
+            ## Or just use pip.
 
-            Just use pip.
-
-            ----
+            ---
 
             # Why?
 
@@ -136,12 +148,13 @@
             ## Distutils
 
             The most basic way to install a package is to download the source code and run:
+            <!-- .element: style="text-align: left;"> -->
 
             ```console
             $ python setup.py install
             ```
 
-            It requires only the `distutils` module, `stdlib`. It works **BUT<!-- .element: class="red" -->**:
+            <p style="text-align: left">It requires only the `distutils` module, `stdlib`. It works **BUT<!-- .element: class="red" -->**:</p>
 
             * You have to manually download all the dependencies.
             * There’s no easy way to uninstall packages.
@@ -151,9 +164,9 @@
 
             ## Setuptools
 
-            Setuptools and `easy_install` were created to solve these problems.
+            <p style="text-align: left">Setuptools and `easy_install` were created to solve these problems.</p>
 
-            It's a 3rd party library that allows Python to understand `.egg` files and `easy_install` is able to download+install package + **all its dependencies**. **BUT<!-- .element: class="red" -->**:
+            <p style="text-align: left">It's a 3rd party library that allows Python to understand `.egg` files and `easy_install` is able to download+install package + **all its dependencies**. **BUT<!-- .element: class="red" -->**:</p>
 
             * If some of the dependencies fails, the installation is not usable.
             * Error codes are incomprehensible.
@@ -174,9 +187,42 @@
 
             ----
 
-            # Main syntax
+            # Installation of pip
 
-            Common operations:
+            <p style="text-align: left">As we said before:</p>
+
+            * From Python 2.7.9 and Python 3.4 pip is included by default (pip3 for Python 3)
+
+            <p style="text-align: left">In any other case you can...</p>
+
+            ---
+
+            #### Get-pip.py
+
+            ```console
+            $ wget https://bootstrap.pypa.io/get-pip.py
+            $ python get-pip.py
+            ```
+
+            #### Debian
+
+            ```console
+            $ apt install python-pip
+            $ apt install python3-pip
+            ```
+
+            #### OSX
+
+            It's included in the python package
+
+            ```console
+            $ brew install python
+            $ brew install python3
+            ```
+
+            ----
+
+            # Syntax
 
             ```console
             $ pip install whatever
@@ -191,25 +237,10 @@
             ```
 
             ```console
+            $ pip install -U pip
             $ pip list
             $ pip freeze
             $ pip help
-            ```
-
-            ----
-
-            # Installation of pip
-
-            #### Debian
-
-            ```console
-            $ apt install...
-            ```
-
-            #### OSX
-
-            ```console
-            $ brew install...
             ```
 
             ----
@@ -228,7 +259,7 @@
 
             ## <span class="red">2.</span> Virtualenv
 
-            We need to create and activate the environment with `virtualenv`:
+            <p style="text-align: left">We need to create and activate the environment with `virtualenv`:</p>
 
             ```console
             $ virtualenv lektor
@@ -247,20 +278,16 @@
 
             ---
 
-            ### <span class="red">3.1.</span> What happened?
-
-            Where are all those files <span class="red">FROM</span>?
+            ### Where are all those files <span class="red">FROM</span>?
 
             * It reads the requirements from `requirements.txt` or `setup.py`
             * <img class="plain" src="images/task1-2.png" />
 
             ---
 
-            ### <span class="red">3.1.</span> What happened?
+            ### Where are all those files <span class="red">GOING</span>?
 
-            Where are all those files <span class="red">GOING</span>?
-
-            * Installed all the packages in the environment directory `env/lib/pythonX.X/site-packages`
+            * The packages are installed in the environment directory `env/lib/pythonX.X/site-packages`
             * <img class="plain" src="images/task1-3.png" />
 
             ---
@@ -279,7 +306,18 @@
 
             ## <span class="red">5.</span> Other stuff
 
-            * Explain different environments for testing, devel or production
+            <p style="text-align: left">pip is just a package manager, afaik it does not support any other kind of stuff like:</p>
+
+            * User commands, depends on other tools, Django:
+              ```
+              $ python manage.py custom_command
+              $ python manage.py test
+              ```
+            * Different environments (testing, devel or production)
+              * `pip` just install what you say, organize yourself:
+                * requirements.txt
+                * requirements-test.txt
+                * requirements-prod.txt...
 
             ----
 
@@ -291,16 +329,73 @@
 
             ## <span class="red">1.</span> Package skel
 
+            ```console
+            $ mkdir task-2/
+            $ cd task-2/
+            $ mkdir iscowalive/ docs/
+            $ touch AUTHORS CHANGELOG LICENSE MANIFEST.in README.md setup.py
+            ```
+            This is how a package *should* look like:
+
+            ```console
+            task-2/         <- package dir
+             iscowalive/  <- app dir
+             docs/          <- documentation
+             AUTHORS        <- authors description
+             CHANGELOG      <- history of changes across versions
+             LICENSE        <- license description
+             MANIFEST.in    <- list of files that should be in the package
+             README.md      <- typical readme file (md, rst... whatever)
+             setup.py       <- meta information about the package
+             ```
+
             ---
 
-            ## <span class="red">2.</span> Publish the package
+            ## <span class="red">2.</span> Run the package
+
+            ```console
+            $ virtualenv iscowalive
+            $ ./iscowalive/bin/activate
+            (iscowalive)$ python setup.py install
+            (iscowalive)$ python setup.py develop
+            (iscowalive)$ bin/ica https://www.userlinux.net
+            OK
+            (iscowalive)$ bin/ica http://google.com/404
+            KO
+            ```
+
+            ---
+
+            ## <span class="red">3.</span> Publish the package: twine
+
+            * An account in [https://pypi.org/](https://pypi.org/) is needed
+
+            ```console
+            $ pip install twine
+            $ cat ~/.pypirc
+            [pypi]
+            username = r0sk
+            password = xxxx
+            $ python setup.py sdist
+            $ twine upload dist/*
+            ```
+
+            * [https://pypi.org/project/iscowalive/](https://pypi.org/project/iscowalive/)
 
             ----
 
             # Best practices
 
+            * Steps to do before to publish the package (version, authors...)
             * Use pip + virtualenv
             * User version pinning
+
+            ----
+
+            # TODO
+
+            * [pipenv](https://docs.pipenv.org/)
+            * [pipsi](https://github.com/mitsuhiko/pipsi)
 
             ----
 
@@ -317,7 +412,7 @@
             <!-- .slide: data-background="#242177" -->
             <img class="plain" src="images/cowlab.png" alt="cowlab - paquetes">
 
-            # Thanks
+            # Thanks!
 
             </script>
         </section>

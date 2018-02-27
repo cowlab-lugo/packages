@@ -1,0 +1,7 @@
+build/
+dist/
+borrame/
+env/
+venv/
+iscowalive.egg-info/
+*.pyc
