@@ -271,12 +271,61 @@
 						</p>
 					</section>
 				</section>
-				<section data-background-color="#242177"
-							data-transition="slide-in slide-out"
-							data-transition-speed="fast"
-							data-markdown
-						>
-						## COMPOSER CREATE PROJECT
+				<section>
+					<section data-background-color="#242177"
+								data-transition="slide-in slide-out"
+								data-transition-speed="fast"
+								data-markdown
+							>
+							## CREATE PROJECT WITH COMPOSER
+					</section>
+						<section data-background-color="#242177"
+								data-transition="slide-in slide-out"
+								data-transition-speed="fast"
+								data-markdown
+							>
+							#### composer create-project
+
+							create new projects from an existing package.
+
+							composer create-project = git clone + composer install
+						</section>
+						<section data-background-color="#242177"
+								data-transition="slide-in slide-out"
+								data-transition-speed="fast"
+								data-markdown
+							>
+							#### new laravel installation
+
+							<pre><code>
+								composer create-project
+										--prefer-dist
+										laravel/laravel
+										myApp
+										"5.5.*"
+				</code></pre>
+
+							* --prefer-source == git clone
+							* --prefer-dist == git clone ... ; rm -fr myApp/.git
+
+						</section>
+						<section data-background-color="#242177"
+								data-transition="slide-in slide-out"
+								data-transition-speed="fast"
+								data-markdown
+							>
+							#### What happens during installation?
+
+							* create myApp folder
+							* post-root-package-install (create .env file)
+							* require packages
+							* suggestions
+							* create composer.lock and dump autoload
+							* post-autoload-dump (laravel postAutoloadDump + package:discover)
+							* post-create-project-cmd (key:generate)
+
+						</section>
+
 				</section>
 				<section>
 					<section data-background-color="#242177"
