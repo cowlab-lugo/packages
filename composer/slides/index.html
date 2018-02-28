@@ -325,7 +325,52 @@
 							* post-create-project-cmd (key:generate)
 
 						</section>
+						<section data-background-color="#242177"
+								data-transition="slide-in slide-out"
+								data-transition-speed="fast"
+								data-markdown
+							>
+							#### Add external package
 
+							<pre><code>
+								composer require mobiledetect/mobiledetectlib
+							</code></pre>
+
+							composer.json:
+
+							<pre><code>
+								"require": {
+									"php": ">=7.0.0",
+									...,
+									...,
+									"mobiledetect/mobiledetectlib": "^2.8"
+								},
+							</code></pre>
+
+						</section>
+
+						<section data-background-color="#242177"
+								data-transition="slide-in slide-out"
+								data-transition-speed="fast"
+								data-markdown
+							>
+							#### Use package
+							<pre><code>
+								Route::get('/', function () {
+
+									$detect = new Mobile_Detect;
+
+									return $detect->getUserAgent();
+
+								});
+							</code></pre>
+
+							#### Remove package
+							<pre><code>
+								composer remove mobiledetect/mobiledetectlib
+							</code></pre>
+
+						</section>
 				</section>
 				<section>
 					<section data-background-color="#242177"
