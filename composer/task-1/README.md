@@ -27,7 +27,7 @@ Route::get('/', function () {
 });
 ```
 
-Install Mobile_Detec
+Remove Mobile_Detec
 ```
 composer remove mobiledetect/mobiledetectlib
 ```
