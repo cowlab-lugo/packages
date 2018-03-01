@@ -163,11 +163,20 @@
 
             And pip is great **BECAUSE<!-- .element: class="green" -->**:
 
-            * Downloads all dependencies before installation: ensure install fidelity.
-            * Install straight from version control systems such as `git`, `mercurial`, `subversion`, and `bazaar`.
+            * Downloads deps **before** installation: install fidelity.
+            * Install from VCS such as `git`, `mercurial`, `subversion`, and `bazaar`.
             * Support uninstallation of packages.
-            * Simple to define fixed sets of requirements (`pip freeze`).
             * Works perfect with `virtualenv`.
+
+            ---
+
+            * `distutils` is already in the `stdlib`, so you can still use it for any other purposes.
+            * `setuptools` is required, so you can take advantage of this.
+
+            In the end, if you install `pip`, you are able to rule them all.
+
+            <img src="images/ring.gif" alt="rule them all" />
+            <!-- .element: class="fragment" data-fragment-index="1" -->
 
             ---
 
