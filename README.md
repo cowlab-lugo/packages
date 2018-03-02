@@ -1,4 +1,4 @@
-# packages
+# Package manager
 
 
 * [PIP](https://cowlab-lugo.github.io/packages/pip/slides/#/)
