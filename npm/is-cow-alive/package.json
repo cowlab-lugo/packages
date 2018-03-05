@@ -1,15 +1,14 @@
 {
   "name": "iscowalive",
-  "version": "1.0.0",
-  "description": "Returns true or false depending on whether the HTTP response status is 200",
+  "version": "1.0.2",
+  "description": "Minimum Viable Package to demonstrate how npm and CommonJS works. See https://cowlab-lugo.github.io/packages/npm/slides/#/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "cowlab",
-    "lugo",
-    "http"
+    "lugo"
   ],
   "author": "Andrés Maneiro <andres.maneiro@gmail.com>",
   "license": "GPL-3.0"

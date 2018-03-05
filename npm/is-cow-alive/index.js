@@ -1,1 +1,3 @@
-module.exports = false;
+module.exports = {
+  response: false,
+};
